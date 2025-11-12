@@ -1,67 +1,29 @@
 <!DOCTYPE html>
-<html lang="zh-TWclearㄏㄠ">
+<html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>結帳頁面</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background-color: #e9bcbc;
-      margin: 0;
-      padding: 20px;
-    }
-    .checkout-container {
-      background: #ebd1d1;
-      padding: 20px;
-      max-width: 500px;
-      margin: 0 auto;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .item {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-    }
-    .total {
-      font-weight: bold;
-      margin-top: 20px;
-    }
-    button {
-      margin-top: 20px;
-      width: 100%;
-      padding: 10px;
-      background: #4b79e3;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #4b79e3;
-;
-    }
-  </style>
+  <title>Check out</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="checkout-container">
-    <h2>結帳畫面</h2>
+    <h2>CHECK OUT</h2>
     <div id="cart-items"></div>
-    <div class="total">總金額：$<span id="total-price">0</span></div>
+    <div class="total">Total:$<span id="total-price">0</span></div>
 
-    <h3>付款方式</h3>
+    <h3>How to pay?</h3>
     <select id="payment">
-      <option>信用卡</option>
-      <option>貨到付款</option>
+      <option>Credit card</option>
+      <option>Cash</option>
     </select>
 
-    <h3>收件人資訊</h3>
-    <input type="text" id="name" placeholder="姓名" style="width:100%; margin-bottom:10px;">
-    <input type="text" id="address" placeholder="地址" style="width:100%; margin-bottom:10px;">
-    <input type="text" id="phone number" placeholder="電話" style="width:100%; margin-bottom:10px;">
+    <h3>Customer information</h3>
+    <input type="text" id="name" placeholder="name" style="width:100%; margin-bottom:10px;">
+    <input type="text" id="address" placeholder="address" style="width:100%; margin-bottom:10px;">
+    <input type="text" id="phone number" placeholder="phone number" style="width:100%; margin-bottom:10px;">
     
-    <button onclick="submitOrder()">送出訂單</button>
+    <button onclick="submitOrder()">SUBMIT</button>
   </div>
 
   <script>
