@@ -1,36 +1,56 @@
- body {
-      font-family: sans-serif;
-      background-color: #e9bcbc;
-      margin: 0;
-      padding: 20px;
-    }
-    .checkout-container {
-      background: #ebd1d1;
-      padding: 20px;
-      max-width: 500px;
-      margin: 0 auto;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .item {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-    }
-    .total {
-      font-weight: bold;
-      margin-top: 20px;
-    }
-    button {
-      margin-top: 20px;
-      width: 100%;
-      padding: 10px;
-      background: #4b79e3;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #4b79e3;
-    }
+/* 背景顏色和字型 */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d0e7ff;  /* 淺藍色 */
+  padding: 20px;
+}
+
+/* 標題樣式 */
+h1 {
+  color: #003366;  /* 深藍色 */
+  text-align: center;
+}
+
+/* 文字段落 */
+p {
+  color: #000000;  /* 黑色 */
+  text-align: center;
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.product-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-card button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background-color: #0056b3;
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}

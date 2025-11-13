@@ -1,64 +1,33 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Check out</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="checkout-container">
-    <h2>CHECK OUT</h2>
-    <div id="cart-items"></div>
-    <div class="total">Total:$<span id="total-price">0</span></div>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>我的第一個商品展示頁</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>哈囉！這是我的第一個商品展示頁</h1>
+    <p>我正在學怎麼做商品展示頁面。</p>
 
-    <h3>How to pay?</h3>
-    <select id="payment">
-      <option>Credit card</option>
-      <option>Cash</option>
-    </select>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/150" alt="商品圖片">
+      <h2>商品名稱：可愛杯子</h2>
+      <p>價格：$200</p>
+      <button>加入購物車</button>
+    </div>
 
-    <h3>Customer information</h3>
-    <input type="text" id="name" placeholder="name" style="width:100%; margin-bottom:10px;">
-    <input type="text" id="address" placeholder="address" style="width:100%; margin-bottom:10px;">
-    <input type="text" id="phone number" placeholder="phone number" style="width:100%; margin-bottom:10px;">
-    
-    <button onclick="submitOrder()">SUBMIT</button>
-  </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/150" alt="商品圖片">
+      <h2>精美筆記本</h2>
+      <p>價格：$150</p>
+      <button>加入購物車</button>
+    </div>
 
-  <script>
-    // 模擬購物車資料
-    const cart = [
-      { name: "T-shirt", price: 500, qty: 2 },
-      { name: "牛仔褲", price: 1200, qty: 1 },
-      { name: "襪子", price: 100, qty: 3 },
-    ];
-
-    const cartContainer = document.getElementById("cart-items");
-    const totalPriceElement = document.getElementById("total-price");
-
-    let total = 0;
-    cart.forEach(item => {
-      const div = document.createElement("div");
-      div.className = "item";
-      div.textContent = `${item.name} x ${item.qty} = $${item.price * item.qty}`;
-      cartContainer.appendChild(div);
-      total += item.price * item.qty;
-    });
-    totalPriceElement.textContent = total;
-
-    function submitOrder() {
-      const name = document.getElementById("name").value;
-      const address = document.getElementById("address").value;
-      const payment = document.getElementById("payment").value;
-
-      if (!name || !address) {
-        alert("請輸入完整的收件人資訊！");
-        return;
-      }
-
-      alert(`訂單已送出！\n收件人：${name}\n地址：${address}\n付款方式：${payment}\n總金額：$${total}`);
-    }
-  </script>
-</body>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/150" alt="商品圖片">
+      <h2>可愛小熊吊飾</h2>
+      <p>價格：$120</p>
+      <button>加入購物車</button>
+    </div>
+  </body>
 </html>
