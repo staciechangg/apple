@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>商品選擇</title>
+</head>
+<body>
+    <h1>商品選擇頁面</h1>
+
+    <div style="text-align: right;">
+        <a href="{{ url_for('cart_page') }}" style="font-size: 24px; text-decoration: none;">
+            🛒 購物車
+        </a>
+    </div>
+
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>商品名稱</th>
+            <th>單價（元）</th>
+            <th>數量</th>
+            <th>操作</th>
+        </tr>
+
+        {% for p in products %}
+        <tr>
+            <td>{{ p.name }}</td>
+            <td>{{ p.price }}</td>
+            <td>
+                <form method="post" action="{{ url_for('add_to_cart') }}" style="display:inline;">
+                    <input type="hidden" name="product_id" value="{{ p.id }}">
+                    <input type="number" name="quantity" value="1" min="1" style="width:60px;">
+                    <button type="submit">加入購物車</button>
+                </form>
+            </td>
+            <td>
+                <!-- 這裡可以放商品說明、圖片連結之類的 -->
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>結帳</title>
+</head>
+<body>
+    <h1>商品結算頁面</h1>
+
+    <p>
+        <a href="{{ url_for('cart_page') }}">← 返回購物車</a>
+    </p>
+
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+
+    <h2>訂購內容</h2>
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>商品名稱</th>
+            <th>單價</th>
+            <th>數量</th>
+            <th>小計</th>
+        </tr>
+        {% for item in items %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.price }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.subtotal }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <p>總金額：<strong>{{ total }}</strong> 元</p>
+
+    <h2>訂購人資訊</h2>
+    <form method="post">
+        <div>
+            <label>姓名：</label>
+            <input type="text" name="name" required>
+        </div>
+        <br>
+        <div>
+            <label>電話：</label>
+            <input type="text" name="phone" required>
+        </div>
+        <br>
+        <div>
+            <label>地址：</label>
+            <input type="text" name="address" size="50" required>
+        </div>
+        <br>
+        <button type="submit">送出訂單</button>
+    </form>
+</body>
+</html>
