@@ -1,33 +1,85 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>我的第一個商品展示頁</title>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>超市商品展示頁</title>
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <h1>哈囉！這是我的第一個商品展示頁</h1>
-    <p>我正在學怎麼做商品展示頁面。</p>
+</head>
+<body>
 
-    <div class="product-card">
-      <img src="https://via.placeholder.com/150" alt="商品圖片">
-      <h2>商品名稱：可愛杯子</h2>
-      <p>價格：$200</p>
-      <button>加入購物車</button>
-    </div>
+<!-- 🔝 右上角購物車 -->
+<div id="cart-icon">
+    🛒
+    <span id="cart-count">0</span>
+</div>
 
-    <div class="product-card">
-      <img src="https://via.placeholder.com/150" alt="商品圖片">
-      <h2>精美筆記本</h2>
-      <p>價格：$150</p>
-      <button>加入購物車</button>
-    </div>
+<h1>歡迎來到超市 🛒✨</h1>
+<p class="subtitle">今天想買點什麼呢？</p>
 
-    <div class="product-card">
-      <img src="https://via.placeholder.com/150" alt="商品圖片">
-      <h2>可愛小熊吊飾</h2>
-      <p>價格：$120</p>
-      <button>加入購物車</button>
-    </div>
-  </body>
+<!-- ====================== 蔬菜類 ====================== -->
+<h2 class="category-title vegetables">🥦 蔬菜類</h2>
+<div class="product-container">
+    <div class="product-card" data-name="生菜" data-price="50"><img src="images/lettuce.png" alt="生菜"><h3>生菜</h3><p>$50</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="番茄" data-price="35"><img src="images/tomato.png" alt="番茄"><h3>番茄</h3><p>$35</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="馬鈴薯" data-price="40"><img src="images/potato.png" alt="馬鈴薯"><h3>馬鈴薯</h3><p>$40</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="紅蘿蔔" data-price="30"><img src="images/carrots.png" alt="紅蘿蔔"><h3>紅蘿蔔</h3><p>$30</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="洋蔥" data-price="25"><img src="images/onion.png" alt="洋蔥"><h3>洋蔥</h3><p>$25</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="高麗菜" data-price="45"><img src="images/cabbage.png" alt="高麗菜"><h3>高麗菜</h3><p>$45</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="玉米" data-price="20"><img src="images/corn.png" alt="玉米"><h3>玉米</h3><p>$20</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="小黃瓜" data-price="28"><img src="images/cucumber.png" alt="小黃瓜"><h3>小黃瓜</h3><p>$28</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+</div>
+
+<!-- ====================== 水果類 ====================== -->
+<h2 class="category-title fruits">🍎 水果類</h2>
+<div class="product-container">
+    <div class="product-card" data-name="蘋果" data-price="40"><img src="images/apple.png" alt="蘋果"><h3>蘋果</h3><p>$40</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="香蕉" data-price="25"><img src="images/banana.png" alt="香蕉"><h3>香蕉</h3><p>$25</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="葡萄" data-price="60"><img src="images/grape.png" alt="葡萄"><h3>葡萄</h3><p>$60</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="芭樂" data-price="35"><img src="images/guava.png" alt="芭樂"><h3>芭樂</h3><p>$35</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="奇異果" data-price="50"><img src="images/kiwi.png" alt="奇異果"><h3>奇異果</h3><p>$50</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="橘子" data-price="55"><img src="images/orange.png" alt="橘子"><h3>橘子</h3><p>$55</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="草莓" data-price="120"><img src="images/strawberry.png" alt="草莓"><h3>草莓</h3><p>$120</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="鳳梨" data-price="70"><img src="images/pineapple.png" alt="鳳梨"><h3>鳳梨</h3><p>$70</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+</div>
+
+<!-- ====================== 蛋奶類 ====================== -->
+<h2 class="category-title dairy">🥛 蛋奶類</h2>
+<div class="product-container">
+    <div class="product-card" data-name="牛奶" data-price="65"><img src="images/milk.png" alt="牛奶"><h3>牛奶</h3><p>$65</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="優格" data-price="55"><img src="images/yogurt.png" alt="優格"><h3>優格</h3><p>$55</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="起司" data-price="80"><img src="images/cheese.png" alt="起司"><h3>起司</h3><p>$80</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="奶油" data-price="70"><img src="images/butter.png" alt="奶油"><h3>奶油</h3><p>$70</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="鮮奶油" data-price="75"><img src="images/cream.png" alt="鮮奶油"><h3>鮮奶油</h3><p>$75</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="豆漿" data-price="50"><img src="images/soymilk.png" alt="豆漿"><h3>豆漿</h3><p>$50</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="雞蛋" data-price="85"><img src="images/egg.png" alt="雞蛋"><h3>雞蛋</h3><p>$85</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="布丁" data-price="60"><img src="images/pudding.png" alt="布丁"><h3>布丁</h3><p>$60</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+</div>
+
+<!-- ====================== 零食類 ====================== -->
+<h2 class="category-title snacks">🍪 零食類</h2>
+<div class="product-container">
+    <div class="product-card" data-name="洋芋片" data-price="39"><img src="images/chips.png" alt="洋芋片"><h3>洋芋片</h3><p>$39</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="巧克力" data-price="50"><img src="images/chocolate.png" alt="巧克力"><h3>巧克力</h3><p>$50</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="餅乾" data-price="45"><img src="images/cookie.png" alt="餅乾"><h3>餅乾</h3><p>$45</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="果凍" data-price="30"><img src="images/jelly.png" alt="果凍"><h3>果凍</h3><p>$30</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="糖果" data-price="25"><img src="images/candy.png" alt="糖果"><h3>糖果</h3><p>$25</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="巧克力棒" data-price="55"><img src="images/chocolate_bar.png" alt="巧克力棒"><h3>巧克力棒</h3><p>$55</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="海苔" data-price="35"><img src="images/seaweed.png" alt="海苔"><h3>海苔</h3><p>$35</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="玉米脆片" data-price="40"><img src="images/cornflakes.png" alt="玉米脆片"><h3>玉米脆片</h3><p>$40</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+</div>
+
+<!-- ====================== 生活用品類 ====================== -->
+<h2 class="category-title household">🧻 生活用品類</h2>
+<div class="product-container">
+    <div class="product-card" data-name="衛生紙" data-price="100"><img src="images/tissue.png" alt="衛生紙"><h3>衛生紙</h3><p>$100</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="洗衣精" data-price="120"><img src="images/detergent.png" alt="洗衣精"><h3>洗衣精</h3><p>$120</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="洗髮精" data-price="150"><img src="images/shampoo.png" alt="洗髮精"><h3>洗髮精</h3><p>$150</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="牙膏" data-price="80"><img src="images/toothpaste.png" alt="牙膏"><h3>牙膏</h3><p>$80</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="沐浴乳" data-price="140"><img src="images/bodywash.png" alt="沐浴乳"><h3>沐浴乳</h3><p>$140</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="濕紙巾" data-price="60"><img src="images/wetwipes.png" alt="濕紙巾"><h3>濕紙巾</h3><p>$60</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="垃圾袋" data-price="55"><img src="images/garbagebag.png" alt="垃圾袋"><h3>垃圾袋</h3><p>$55</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+    <div class="product-card" data-name="洗碗精" data-price="70"><img src="images/dishsoap.png" alt="洗碗精"><h3>洗碗精</h3><p>$70</p><div class="qty-box"><button class="qty-btn minus">-</button><span class="qty">0</span><button class="qty-btn plus">+</button></div><button class="cart-btn">加入購物車</button></div>
+</div>
+
+</body>
 </html>

@@ -1,56 +1,163 @@
-/* 背景顏色和字型 */
+/* 整體背景與字型 */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #d0e7ff;  /* 淺藍色 */
+  font-family: "Avenir", "Noto Sans TC", sans-serif;
+  background-color: #fdf6f0;   /* 奶油米白 */
+  margin: 0;
   padding: 20px;
+  color: #4a4a4a;
 }
 
-/* 標題樣式 */
+/* 主標題 */
 h1 {
-  color: #003366;  /* 深藍色 */
   text-align: center;
+  font-size: 34px;
+  color: #ff7b7b;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 700;
 }
 
-/* 文字段落 */
-p {
-  color: #000000;  /* 黑色 */
+/* 副標 */
+.subtitle {
   text-align: center;
+  font-size: 18px;
+  color: #8a8a8a;
+  margin-bottom: 30px;
 }
 
+/* 類別標題 */
+.category-title {
+  font-size: 26px;
+  margin-top: 40px;
+  margin-bottom: 18px;
+  font-weight: 600;
+  padding-left: 5px;
+}
+
+/* 各分類顏色 */
+.category-title.vegetables { color: #2ecc71; }  /* 綠色 */
+.category-title.fruits     { color: #e74c3c; }  /* 紅色 */
+.category-title.snacks     { color: #f39c12; }  /* 橙色 */
+.category-title.dairy      { color: #3498db; }  /* 藍色 */
+.category-title.household  { color: #9b59b6; }  /* 紫色 */
+
+/* 商品容器：一排 4 個商品 */
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  justify-items: center;
+  margin-bottom: 40px;
+}
+
+/* 商品卡片 */
 .product-card {
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 15px;
   width: 200px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 15px;
   text-align: center;
-  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* hover 效果 */
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+/* 商品圖片置中 */
 .product-card img {
   width: 150px;
   height: 150px;
+  border-radius: 14px;
   object-fit: cover;
-  border-radius: 5px;
+  margin: 0 auto 10px auto;
+  display: block;
 }
 
-.product-card button {
-  background-color: #007BFF;
+/* 商品名稱 */
+.product-card h3 {
+  font-size: 18px;
+  color: #ff6f91;
+  margin-bottom: 6px;
+}
+
+/* 價格 */
+.product-card p {
+  font-size: 16px;
+  color: #6b6b6b;
+  margin: 0;
+}
+
+/* 數量調整 */
+.qty-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  gap: 10px;
+}
+
+.qty-btn {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background-color: #ffe4e1;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.qty-btn:hover {
+  background-color: #ffb6c1;
+}
+
+.qty {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* 加入購物車按鈕 */
+.cart-btn {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #ff8fab;
   color: white;
   border: none;
-  padding: 8px 12px;
-  margin-top: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
+  font-size: 16px;
   cursor: pointer;
+  margin-top: 8px;
+  transition: 0.2s;
 }
 
-.product-card button:hover {
-  background-color: #0056b3;
+.cart-btn:hover {
+  background-color: #ff5d8f;
 }
 
-.product-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+/* 右上角購物車 */
+#cart-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#cart-count {
+  display: inline-block;
+  min-width: 20px;
+  background-color: #ff6f91;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 50%;
+  padding: 2px 6px;
+  margin-left: 5px;
+  vertical-align: top;
+  text-align: center;
 }
