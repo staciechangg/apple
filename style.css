@@ -1,36 +1,53 @@
- body {
-      font-family: sans-serif;
-      background-color: #e9bcbc;
-      margin: 0;
-      padding: 20px;
-    }
-    .checkout-container {
-      background: #ebd1d1;
-      padding: 20px;
-      max-width: 500px;
-      margin: 0 auto;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .item {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-    }
-    .total {
-      font-weight: bold;
-      margin-top: 20px;
-    }
-    button {
-      margin-top: 20px;
-      width: 100%;
-      padding: 10px;
-      background: #4b79e3;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #4b79e3;
-    }
+/* --- Checkout 主題，套用粉色系風格 --- */
+
+body {
+  background-color: #fdf6f0;
+  font-family: "Avenir", "Noto Sans TC", sans-serif;
+  color: #4a4a4a;
+  padding: 30px;
+}
+
+/* 標題風格統一 */
+h1, h2 {
+  color: #ff7b7b;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* 區塊標題 */
+.section-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 25px;
+  margin-bottom: 12px;
+}
+
+/* 表單樣式 */
+input, select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+/* 提交按鈕 */
+button, input[type="submit"] {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #ff8fab;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #ff5d8f;
+}
+

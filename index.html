@@ -8,22 +8,22 @@
 </head>
 <body>
   <div class="checkout-container">
-    <h2>CHECK OUT</h2>
+    <h2>結帳頁面</h2>
     <div id="cart-items"></div>
-    <div class="total">Total:$<span id="total-price">0</span></div>
+    <div class="total">總共：$<span id="total-price">0</span></div>
 
-    <h3>How to pay?</h3>
+    <h3>付款方式</h3>
     <select id="payment">
-      <option>Credit card</option>
-      <option>Cash</option>
+      <option>信用卡</option>
+      <option>現金</option>
     </select>
 
-    <h3>Customer information</h3>
-    <input type="text" id="name" placeholder="name" style="width:100%; margin-bottom:10px;">
-    <input type="text" id="address" placeholder="address" style="width:100%; margin-bottom:10px;">
-    <input type="text" id="phone number" placeholder="phone number" style="width:100%; margin-bottom:10px;">
+    <h3>顧客資訊</h3>
+    <input type="text" id="name" placeholder="姓名" style="width:100%; margin-bottom:10px;">
+    <input type="text" id="address" placeholder="地址" style="width:100%; margin-bottom:10px;">
+    <input type="text" id="phone number" placeholder="電話" style="width:100%; margin-bottom:10px;">
     
-    <button onclick="submitOrder()">SUBMIT</button>
+    <button onclick="submitOrder()">確認結帳</button>
   </div>
 
   <script>
