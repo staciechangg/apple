@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>我的第一個商品展示頁</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <h1>歡迎來到網路超市！</h1>
+    <p>今天想買點什麼嗎？</p>
+
+<div class="product-container">
+  {% for p in products %}
+    <div class="product-card">
+      <h2>{{ p.name }}</h2>
+      <p>$ {{ p.price }}</p>
+
+      <form method="post" action="{{ url_for('add_to_cart') }}">
+        <input type="hidden" name="product_id" value="{{ p.id }}">
+        <label>
+          數量：
+          <input type="number" name="quantity" value="1" min="1">
+        </label>
+        <button type="submit">加入購物車</button>
+      </form>
+    </div>
+  {% endfor %}
+</div>
+
+  </body>
+</html>
